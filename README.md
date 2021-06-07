@@ -25,4 +25,16 @@
 - 몬스터 컨트롤러 : 랜덤으로 좌우이동하도록 설정 
 
 ![image](https://user-images.githubusercontent.com/84612961/120946418-64234200-c777-11eb-8b5d-66be73d04ef9.png)
+주인공 꼬꼬 에셋
 
+![image](https://user-images.githubusercontent.com/84612961/120946457-8ae17880-c777-11eb-88e5-9618165af134.png)
+덫 에셋
+
+![image](https://user-images.githubusercontent.com/84612961/120946478-a0ef3900-c777-11eb-94b6-ff1615fdd5c0.png)
+배경에셋
+
+![image](https://user-images.githubusercontent.com/84612961/120946492-b19faf00-c777-11eb-9a5f-34aea5ac3a06.png)
+몬스터 에셋
+
+![image](https://user-images.githubusercontent.com/84612961/120946522-c2e8bb80-c777-11eb-8d1e-e0a5f24c57ab.png)
+포션 에셋
