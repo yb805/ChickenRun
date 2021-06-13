@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,7 +25,8 @@ public class Monster : MonoBehaviour
             if (transform.position.x <= minX||
                 transform.position.x >= maxX)
             {
-                sign*= -1;
+                transform.Rotate(new Vector3(0,-180,0));
+                sign *= -1;
             }
             
         }
