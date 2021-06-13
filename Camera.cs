@@ -1,24 +1,31 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
-    public Transform target; // 따라다닐 타겟 오브젝트 Transform
-
-    private Transform tr; // 카메라 자신의 Transform
+    public GameObject player;
+    public float xmove = 0;
+    public float ymove = 0;
+    public float distance = 3;
 
     // Start is called before the first frame update
     void Start()
     {
-        tr = GetComponent<Transform>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        tr.position = new Vector3(target.position.x - 0.1f, tr.position.y, target.position.z - 3f);
+        if (Input.GetMouseButton(1))
+        {
+            xmove += Input.GetAxis("Mouse X");
+            ymove -= Input.GetAxis("Mouse Y");
+        }
 
-        tr.LookAt(target);
+        transform.rotation = Quaternion.Euler(ymove, xmove, 0);
+        Vector3 reverseDistance = new Vector3(0.0f, 0.0f, distance);
+        transform.position = player.transform.position - transform.rotation * reverseDistance;
     }
 }
