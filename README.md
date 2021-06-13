@@ -18,7 +18,7 @@
  
  
  
- - 사용할 에셋:
+ - **사용할 에셋:**
 
 ![image](https://user-images.githubusercontent.com/84612961/120946418-64234200-c777-11eb-8b5d-66be73d04ef9.png)
 주인공 꼬꼬 에셋
@@ -110,7 +110,59 @@ hp +-제어를 통한 씬 전환 : 생존게임의 기본작동을 위해 추가
 < 텔레포트의 기능 >
 
 게임의 진행화면(보고있는)전환을 위함
-어디론가 순간이동하는 듯한 느낌을 주려는 의도 = 텔레포트 사
+어디론가 순간이동하는 듯한 느낌을 주려는 의도 = 텔레포트 사용
 
+**7) 쿠키컨트롤**
+
+
+쿠키가 일정한 80속도로 일정한 회전 
+충돌시 destroy 
+
+
+< 쿠키 컨트롤의 기능>
+
+ 배경이 아닌 아이템을 알리기 : 배경에셋이 아닌 특별한 행위가 일어나는 아이템을 알리기위한 스핀을 구현 
+ hp의 상승의 자연스러움 : 쿠키는 포션의 역할로 쉽게 말해 꼬꼬가 체력을 보충하기위해 ‘먹는’ 것 중 하나. 그러므로 자연스럽게 먹어 없어지는 효과를 구현하기 위한 없애기 
+
+
+**8) 클리어** 
+
+ 콜라이더에 chicken 충돌시 클리어 씬 전환
+
+
+<클리어 기능>
+ 게임의 성공종료를 위한 충돌 씬전환 : 꼬꼬가 무사히 도착 시 성공씬으로 전환되는 것을 구현
+ 
+ 
+ 
+-**게임화면** 
+
+
+![image](https://user-images.githubusercontent.com/84612961/121803025-85ee5e80-cc7a-11eb-95be-b1017334f29d.png)
+스타트화면
+
+![image](https://user-images.githubusercontent.com/84612961/121803178-483e0580-cc7b-11eb-8834-d5bea7c09c3f.png)
+전체맵 
+
+![image](https://user-images.githubusercontent.com/84612961/121803049-9c94b580-cc7a-11eb-86d4-58cb3cb49226.png)
+게임시작화면
+
+![image](https://user-images.githubusercontent.com/84612961/121803097-d1087180-cc7a-11eb-9a99-78f9427b3d7b.png)
+덫에 의해 다친꼬꼬
+
+![image](https://user-images.githubusercontent.com/84612961/121803104-d9f94300-cc7a-11eb-8c27-8b52a8859d89.png)
+텔레포트 한 꼬꼬
+
+![image](https://user-images.githubusercontent.com/84612961/121803113-e54c6e80-cc7a-11eb-82bb-b93ada8fb21a.png)
+ 피 회복 과 앞의 두더지 몬스터 
+
+![image](https://user-images.githubusercontent.com/84612961/121803215-6efc3c00-cc7b-11eb-97af-364b5f9f83c2.png)
+클리어지점 
+
+
+![image](https://user-images.githubusercontent.com/84612961/121803226-80454880-cc7b-11eb-9df3-68012f4e4a95.png)
+
+![image](https://user-images.githubusercontent.com/84612961/121803224-7c192b00-cc7b-11eb-8d4a-09800c32408d.png)
+게임오버씬/ 클리어씬 
 
 
