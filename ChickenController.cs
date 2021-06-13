@@ -1,11 +1,17 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ChickenController : MonoBehaviour
 {
     public float speed = 20f;
-    public int hp;
+    public float Maxhp;
+    public float hp;
+    public GameObject Cam;
+    public Image healthBar;
+
 
     Rigidbody rigidbody;
     Animator animator;
@@ -20,6 +26,11 @@ public class ChickenController : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+
+        Maxhp = 3;
+        hp = 1;
+        healthBar = GameObject.Find("HealthGauge").GetComponent<Image>();
+        healthBar.fillAmount = 1;
     }
 
     // Update is called once per frame
@@ -27,6 +38,18 @@ public class ChickenController : MonoBehaviour
     {
         horizontalMove = Input.GetAxisRaw("Horizontal");
         verticalMove = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        {
+            var offset = Cam.transform.forward;
+            offset.y = 0;
+        }
+
+        if (healthBar.fillAmount == 0)
+        {
+            SceneManager.LoadScene("OverScene");
+        }
+
 
         Run();
         Turn();
@@ -60,12 +83,20 @@ public class ChickenController : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter(Collider other)
+
+    public void OnCollisionEnter(Collision other)
     {
+
         if (other.gameObject.tag == "Trap")
         {
-            hp--;
+            healthBar.fillAmount -= hp / Maxhp;
         }
+
+        if (other.gameObject.tag == "Food")
+        {
+            healthBar.fillAmount += hp / Maxhp;
+        }
+
     }
 
 }
